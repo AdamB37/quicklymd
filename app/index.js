@@ -12,6 +12,7 @@ import {
 
 // components
 import View1 from 'containers/view1/view1'
+import Menu from 'containers/menu/menu'
 
 // styles import. It needs to be in the project somewhere once
 import styles from 'styles/app.scss'
@@ -47,9 +48,9 @@ const logPageView = () => {
 render(
   <div className="globalContainer">
     <div className="responsiveWidth">
-
+      <Menu />
       <Router history={ browserHistory } onUpdate={logPageView}>
-        <Route path="/" component={View1}/>
+        {/* <Route path="/" component={Menu}/> */}
       </Router>
 
     </div>

@@ -1,0 +1,83 @@
+.menu-container {
+  display: flex;
+  color: red;
+  justify-content: space-between;
+  height: 3.45rem;
+  width: 100%;
+}
+
+.primary-container {
+  display: flex;
+  justify-content: space-around;
+  // flex-direction: row;
+  border-left: solid;
+  border-color: black;
+  height: 100%;
+  width: 15%;
+  align-items: center;
+}
+
+.primary-buttons {
+  height: 2rem;
+  width: 6rem;
+  border-radius: 5px;
+  font-size: 0.7rem;
+}
+
+.auth-button {
+  padding-right: 2rem;
+  background-color: white;
+  color: red;
+  border-width: thin;
+  border-color: red;
+}
+
+.auth-button:active {
+  border-width: thin;
+  border-color: red;
+}
+
+.start-button {
+  padding-right: 1.2rem;
+  background-color: red;
+  color: white;
+  border: 0;
+}
+
+.secondary-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 85%;
+}
+
+.secondary-buttons {
+  background-color: white;
+  border: 0;
+}
+
+.nested-secondary {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  width: 50%;
+  align-items: center;
+}
+
+.logo {
+  align-self: center;
+}
+
+.services-menu-container {
+  display: flex;
+  flex-direction: column;
+  height: 8rem;
+  width: 100%;
+  align-items: center;
+  padding-left: 5%;
+}
+
+.services-menu-button {
+  height: 25%;
+  width: 5%;
+}
