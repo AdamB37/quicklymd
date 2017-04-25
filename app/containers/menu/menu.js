@@ -1,4 +1,5 @@
-import { React } from "globalImports"
+import { React, Link } from "globalImports"
+import Login from '../login/login'
 
 export default class Menu extends React.Component {
 
@@ -78,6 +79,7 @@ export default class Menu extends React.Component {
   }
 
   renderAuthButtons(){
+    console.log('here')
     if(this.state.authed){
       return <div>
         <button className="auth-button primary-buttons">Login</button>

@@ -1,0 +1,26 @@
+.signup-container {
+  border-top: 2px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 36rem;
+  width: 100%;
+}
+
+.signup-render-container {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 35%;
+}
+
+.signup-button-valid {
+  background-color: green;
+}
+.signup-button-invalid {
+  background-color: red;
+}

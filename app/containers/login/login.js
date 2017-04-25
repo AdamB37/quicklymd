@@ -15,7 +15,7 @@ export default class Login extends React.Component {
       validPassword: false,
       error: ''
     }
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleInput = this.handleInput.bind(this)
     this.renderSubmit = this.renderSubmit.bind(this)
     this.resetForm = this.resetForm.bind(this)
   }
@@ -23,21 +23,20 @@ export default class Login extends React.Component {
 
 
   renderLogin() {
-
+    console.log('LOGIN')
     return (
       <div className="login-render-container">
         <h1>Sign In</h1>
         {this.renderError()}
-        <input type="text" placeholder={this.state.placeholderEmail} onChange={this.handleSubmit} ref="emailInput"/>
-        <input type="password" placeholder={this.state.placeholderPassword} onChange={this.handleSubmit} ref="passwordInput"/>
+        <input type="text" placeholder={this.state.placeholderEmail} onChange={this.handleInput} ref="emailInput"/>
+        <input type="password" placeholder={this.state.placeholderPassword} onChange={this.handleInput} ref="passwordInput"/>
         {this.renderSubmit()}
         <button className="reset-button" onClick={this.resetForm}>Reset</button>
       </div>
     )
   }
-// TODO: render submit as unclickable when email and password aren't valid
-//       then if it is valid become clickable
-  handleSubmit(event) {
+
+  handleInput(event) {
     event.preventDefault()
     const validEmail = this.state.validEmail
     const validPassword = this.state.validPassword
@@ -115,7 +114,6 @@ export default class Login extends React.Component {
       password: '',
       validPassword: false,
     })
-    // this.render()
   }
 
   renderError() {

@@ -2,8 +2,10 @@ import React from 'react'
 import {
   Router,
   Route,
+  Link,
   browserHistory,
-  Redirect
+  Redirect,
+  RouteHandler
 } from 'react-router'
 import { render } from 'react-dom'
 import ReactGA from 'react-ga'

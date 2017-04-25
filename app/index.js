@@ -7,13 +7,16 @@ import {
   render,
   ReactGA,
   FontFaceObserver,
-  es6Promise
+  es6Promise,
+  Link,
+  RouteHandler
 } from 'globalImports'
 
 // components
 import View1 from 'containers/view1/view1'
 import Menu from 'containers/menu/menu'
 import Login from 'containers/login/login'
+import SignUp from 'containers/signup/signup'
 
 // styles import. It needs to be in the project somewhere once
 import styles from 'styles/app.scss'
@@ -50,11 +53,12 @@ render(
   <div className="globalContainer">
     <div className="responsiveWidth">
       <Menu />
-      <Login />
-      <Router history={ browserHistory } onUpdate={logPageView}>
-        {/* <Route path="/" component={Menu}/> */}
-      </Router>
-
+      <SignUp />
+      {/* <Router history={ browserHistory } onUpdate={logPageView}>
+        <Route path="/" component={Menu}>
+          <Route path="login" component={Login}></Route>
+        </Route>
+      </Router> */}
     </div>
   </div>,
   document.getElementById('mount')
