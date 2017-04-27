@@ -1,4 +1,4 @@
-import { React } from 'globalImports'
+import { React, Link } from 'globalImports'
 
 const validEmailRegex = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)
 const validPasswordRegex = new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/)
@@ -23,7 +23,6 @@ export default class Login extends React.Component {
 
 
   renderLogin() {
-    console.log('LOGIN')
     return (
       <div className="login-render-container">
         <h1>Sign In</h1>
@@ -32,6 +31,9 @@ export default class Login extends React.Component {
         <input type="password" placeholder={this.state.placeholderPassword} onChange={this.handleInput} ref="passwordInput"/>
         {this.renderSubmit()}
         <button className="reset-button" onClick={this.resetForm}>Reset</button>
+        <Link to="/signup">
+          <button>SignUp</button>
+        </Link>
       </div>
     )
   }

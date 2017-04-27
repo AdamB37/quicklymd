@@ -9,7 +9,8 @@ import {
   FontFaceObserver,
   es6Promise,
   Link,
-  RouteHandler
+  RouteHandler,
+  IndexRoute
 } from 'globalImports'
 
 // components
@@ -17,6 +18,7 @@ import View1 from 'containers/view1/view1'
 import Menu from 'containers/menu/menu'
 import Login from 'containers/login/login'
 import SignUp from 'containers/signup/signup'
+import Services from 'containers/services_offered/services_offered'
 
 // styles import. It needs to be in the project somewhere once
 import styles from 'styles/app.scss'
@@ -52,13 +54,13 @@ const logPageView = () => {
 render(
   <div className="globalContainer">
     <div className="responsiveWidth">
-      <Menu />
-      <SignUp />
-      {/* <Router history={ browserHistory } onUpdate={logPageView}>
+      <Router history={ browserHistory } onUpdate={logPageView}>
         <Route path="/" component={Menu}>
+          <Route path="services" component={Services}></Route>
           <Route path="login" component={Login}></Route>
+          <Route path="signup" component={SignUp}></Route>
         </Route>
-      </Router> */}
+      </Router>
     </div>
   </div>,
   document.getElementById('mount')

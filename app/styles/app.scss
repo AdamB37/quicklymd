@@ -73,6 +73,7 @@ $breakpoint-3: 1000;
 $breakpoint-4: 930;
 $breakpoint-5: 880;
 
+
 .globalWidthMediaQueries {
   margin: 0 auto;
   @include media('>=#{$breakpoint-1}px') {
@@ -229,3 +230,4 @@ button:focus {
 @import '../containers/menu/menu';
 @import '../containers/login/login';
 @import '../containers/signup/signup';
+@import '../containers/services_offered/services_offered';

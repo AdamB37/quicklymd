@@ -1,6 +1,7 @@
 import { React, Link } from "globalImports"
 import Login from '../login/login'
 
+
 export default class Menu extends React.Component {
 
   constructor(props) {
@@ -19,13 +20,13 @@ export default class Menu extends React.Component {
     this.setState({
       services_clicked : x
     })
-    console.log("toggle")
   }
 
   renderFAQ() {
+    const faq = 'FAQ'
     return (
       <div>
-        <button className="secondary-buttons">FAQ</button>
+        <button className="secondary-buttons">{faq}</button>
       </div>
     )
   }
@@ -79,11 +80,14 @@ export default class Menu extends React.Component {
   }
 
   renderAuthButtons(){
-    console.log('here')
     if(this.state.authed){
-      return <div>
-        <button className="auth-button primary-buttons">Login</button>
-      </div>
+      return (
+        <div>
+          <Link to="/login" activeClassName="active">
+            <button className="auth-button primary-buttons">Login</button>
+          </Link>
+        </div>
+      )
     }
     else{
       return <div>
@@ -132,6 +136,9 @@ export default class Menu extends React.Component {
         </div>
         <div>
           {this.renderServicesMenu()}
+        </div>
+        <div>
+          {this.props.children}
         </div>
       </div>
     )

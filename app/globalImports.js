@@ -5,7 +5,8 @@ import {
   Link,
   browserHistory,
   Redirect,
-  RouteHandler
+  RouteHandler,
+  IndexRoute
 } from 'react-router'
 import { render } from 'react-dom'
 import ReactGA from 'react-ga'
@@ -28,5 +29,7 @@ module.exports = {
   observer,
   mobx,
   observable,
-  action
+  action,
+  Link,
+  IndexRoute
 }
