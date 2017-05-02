@@ -118,7 +118,7 @@ export default class Menu extends React.Component {
         <div className="menu-container">
           <div className="secondary-container">
             <div className="logo">
-              {this.renderLogo()}
+              <Link to="/">{this.renderLogo()}</Link>
             </div>
             <div className="nested-secondary">
               {this.renderFAQ()}

@@ -56,7 +56,7 @@ render(
     <div className="responsiveWidth">
       <Router history={ browserHistory } onUpdate={logPageView}>
         <Route path="/" component={Menu}>
-          <Route path="services" component={Services}></Route>
+          <IndexRoute component={Services}></IndexRoute>
           <Route path="login" component={Login}></Route>
           <Route path="signup" component={SignUp}></Route>
         </Route>

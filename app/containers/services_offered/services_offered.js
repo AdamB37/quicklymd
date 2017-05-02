@@ -31,7 +31,7 @@ export default class Services extends React.Component {
         ))}
 
       </div>
-      )
+    )
 
     return (
       <Services services={this.state.services} />
